@@ -122,9 +122,9 @@ namespace YoutubeAudioDownloader
             while (!stopped)
             {
                 waitHandle.WaitOne();
-                DownloadReservation res = null;
                 while (true)
                 {
+                    DownloadReservation res = null;
                     var a = BeginInvoke(new Action(() => {
                         lock (SyncRoot)
                         {
